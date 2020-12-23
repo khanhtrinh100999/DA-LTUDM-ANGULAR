@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Bai06": {
+    "Bai07": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Bai06",
+            "outputPath": "dist/Bai07",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Bai06:build"
+            "browserTarget": "Bai07:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Bai06:build:production"
+              "browserTarget": "Bai07:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Bai06:build"
+            "browserTarget": "Bai07:build"
           }
         },
         "test": {
@@ -113,19 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Bai06:serve"
+            "devServerTarget": "Bai07:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Bai06:serve:production"
+              "devServerTarget": "Bai07:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Bai06",
+  "defaultProject": "Bai07",
   "cli": {
-    "analytics": "a7f9b31b-e32d-4af2-a55d-27a2bb9233cb"
+    "analytics": "278f6f1d-6446-41c1-b99a-cf005bfcd04f"
   }
 }
