@@ -2,79 +2,69 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-//import { ComponentToViewComponent } from './components/component-to-view/component-to-view.component';
-import { LoginComponent } from './components/login/login.component';
+import { DangnhapComponent } from './dangnhap/dangnhap.component';
+import { DangkyComponent } from './dangky/dangky.component';
+import { KhaibaosoduComponent } from './khaibaosodu/khaibaosodu.component';
+import { DsgiaodichComponent } from './dsgiaodich/dsgiaodich.component';
+import { ViComponent } from './vi/vi.component';
+import { ThemgiaodichComponent } from './themgiaodich/themgiaodich.component';
+import { ThongtingiaodichComponent } from './thongtingiaodich/thongtingiaodich.component';
+//import { ComponentToViewComponent } from './Components/component-to-view/component-to-view.component';
 import {FormsModule} from '@angular/forms';
-import { FormWorkComponent } from './components/form-work/form-work.component';
-import { KbaoSoDuComponent } from './components/kbao-so-du/kbao-so-du.component';
-import { DangkyComponent } from './components/dangky/dangky.component';
 import {RouterModule,Routes} from '@angular/router';
-import { AddComponent } from './components/add/add.component';
-import { ResetComponent } from './components/reset/reset.component';
-import { DeleteComponent } from './components/delete/delete.component';
-import { KiemTraComponent } from './components/kiem-tra/kiem-tra.component';
+import { Router } from '@angular/router';
+import {WorkService} from './work.service'
+//import {HttpClientModule} from '@angular/common/http';
 const appRoutes:Routes=[
   {
-    path:'login', component:LoginComponent
+    path:'login', component:DangnhapComponent
   },
   {
-    path:'dky', component: DangkyComponent
+    path:'dangky', component: DangkyComponent
   },
   {
-    path:'kbao', component: KbaoSoDuComponent
+    path:'dsgiaodich', component: DsgiaodichComponent
   },
   {
-    path:'lviec', component: FormWorkComponent 
+    path:'sodu', component: KhaibaosoduComponent 
   },
 
   {
-    path:'add', component: AddComponent
+    path:'themgiaodich', component: ThemgiaodichComponent
     },
 
   {
-    path:'reset', component:ResetComponent 
-    },
-    {
-    path:'delete', component:DeleteComponent
+    path:'thongtingiaodich', component: ThongtingiaodichComponent
     },
     {
-     path:"ktra", component:KiemTraComponent 
+    path:'vi', component:ViComponent
     },
-
-    
-
- 
-    
- 
-  //{
-  //path: '', redirectTo: '/login', pathMatch: 'full'
-  //},
   {
-    path:'ve',component:  AppComponent,
+    path:'thoat',component:  AppComponent,
   }
-   
+  ]
 
-
-]
 @NgModule({
   declarations: [
     AppComponent,
-    //ComponentToViewComponent,
-    LoginComponent,
-    FormWorkComponent,
-    KbaoSoDuComponent,
+    DangnhapComponent,
     DangkyComponent,
-    AddComponent,
-    ResetComponent,
-    DeleteComponent,
-    KiemTraComponent
+    KhaibaosoduComponent,
+    DsgiaodichComponent,
+    ViComponent,
+    ThemgiaodichComponent,
+    ThongtingiaodichComponent,
+    //ComponentToViewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+   // HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [
+    WorkService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
