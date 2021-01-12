@@ -10,14 +10,15 @@ import { ViComponent } from './vi/vi.component';
 import { ThemgiaodichComponent } from './themgiaodich/themgiaodich.component';
 import { ThongtingiaodichComponent } from './thongtingiaodich/thongtingiaodich.component';
 //import { ComponentToViewComponent } from './Components/component-to-view/component-to-view.component';
-import {FormsModule} from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {RouterModule,Routes} from '@angular/router';
-import { Router } from '@angular/router';
-import {WorkService} from './work.service'
-//import {HttpClientModule} from '@angular/common/http';
+//import {DataService} from './data.service'
+import {HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpInterceptorService } from './http-interceptor.service';
+import {HttpClientModule} from '@angular/common/http';
 const appRoutes:Routes=[
   {
-    path:'login', component:DangnhapComponent
+    path:'', component:DangnhapComponent
   },
   {
     path:'dangky', component: DangkyComponent
@@ -58,12 +59,20 @@ const appRoutes:Routes=[
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-   // HttpClientModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
-    WorkService
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

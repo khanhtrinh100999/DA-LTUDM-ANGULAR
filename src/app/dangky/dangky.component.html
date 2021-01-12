@@ -6,47 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="dangky.component.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-        <header>
-            <div class="container">
-               
+    <div class="container col-lg-6">
+        <h1 class="text-center">dangky</h1>
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="registerForm" class="form-group" (ngSubmit)=dangky()>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input formControlName="username" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input formControlName="password" class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <label>fullname</label>
+                        <input formControlName="fullname" class="form-control" type="fullname">
+                    </div>
+                        <div class="form-group">
+                        <label>gmail</label>
+                        <input formControlName="password" class="form-control" type="gmail">
+                    </div>
+                    <button type="submit" (click)="dangky()">
+                        Đăng ký
+                    </button>
+                    <button type="submit" (click)="dangnhap()">
+                        Thoát
+                    </button>
+                </form>
             </div>
-        </header>
-        <main>
-            <div class="container">
-                <div class="register-form">
-                    <form action="" method="post" style="text-align: center;" >
-                        <h1 class="a">Đăng ký tài khoản mới</h1>
-                        <div class="input-box">
-
-                            <input type="text" placeholder="Nhập tên đăng nhập">
-                        </div>
-                        <div class="input-box">
-
-                            <input type="password" placeholder="Nhập mật khẩu">
-                        </div>
-                        <div class="input-box">
-
-                            <input type="password" placeholder="Xác nhận mật khẩu">
-                        </div>
-                        
-                        
-                        <div class="btn-box  " style="text-align: center;">
-                            <button type="submit" (click)="vi()">
-                                Đăng ký
-                            </button>
-                            <button type="submit" (click)="login()">
-                                Thoát
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="container">
-                
-            </div>
-        </footer>
-    </body>
+    
+        </div>
+    
+    </div>
 </html>
