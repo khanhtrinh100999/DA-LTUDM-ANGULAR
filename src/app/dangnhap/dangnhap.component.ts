@@ -29,7 +29,10 @@ export class DangnhapComponent implements OnInit {
       response => {
         var code = response.status;
         if(code === 200){
-          this.router.navigate(['/'])
+          alert("dang nhap thanh cong")
+          this.authenticationService.registerSuccessfulLogin(this.loginForm.value)
+          this.router.navigate(['/dsgiaodich'])
+
         }
         else{
           alert("dang nhap that bai")

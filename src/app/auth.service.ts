@@ -5,7 +5,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  BASE_PATH = "http://localhost:3000/posts"
+  // BASE_PATH = "http://localhost:3000/posts"
+  BASE_PATH = "http://192.168.52.11:8080"
   USER_NAME_SESSION = 'username_session'
   public username!: String;
   public password!: String;
@@ -19,8 +20,9 @@ export class AuthenticationService {
     var params = new HttpParams()
       .set('username', username)
       .set('password', password);
-    return this.http.post<Response>(this.BASE_PATH + "/account/login", params, {
-      observe: 'response'
+    // return this.http.post<Response>(this.BASE_PATH + "/account/login", params, {
+      return this.http.post<Response>(this.BASE_PATH + "/account/login", {username: username, password:password},
+      {observe: 'response'
     });
   }
   dangky(username: String, password: String, fullname: String, gmail: String) {
@@ -53,3 +55,5 @@ export class AuthenticationService {
     return user
   }
 }
+
+

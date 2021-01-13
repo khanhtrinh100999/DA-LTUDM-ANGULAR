@@ -21,10 +21,11 @@ export class DangkyComponent implements OnInit {
   ngOnInit() {
   }
   onBack(){
-  this.router.navigate(['/dangnhap']);
+  this.router.navigate(['']);
   } 
   dangky() { 
-    this.authenticationService.dangky(this.registerForm.value.fullname,this.registerForm.value.gmail,this.registerForm.value.password,this.registerForm.value.username)
+
+    this.authenticationService.dangky(this.registerForm.value.username,this.registerForm.value.password, this.registerForm.value.fullname,this.registerForm.value.gmail)
     .subscribe((response: { status: any; }) => {
       var code = response.status;
       if(code == 201){
@@ -40,7 +41,7 @@ export class DangkyComponent implements OnInit {
   	this.router.navigate(['sodu'])
   }
   dangnhap(){
-  	this.router.navigate(['dangnhap'])
+  	this.router.navigate([''])
   }
 
 }

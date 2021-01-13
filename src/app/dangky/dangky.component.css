@@ -31,14 +31,14 @@ main{
     padding: 7.5px 15px;
 }
 footer{
-    background-color: #cccccc;
+    background-color: #6c98bd;
     min-height: 70px;
     padding: 15px;
 }
 h1{
-    color: #009999;
-    font-size: 20px;
-    margin-bottom: 30px;
+    color: #000a0a;
+    font-size: 30px;
+    margin-bottom: 40px;
 }
 
 .register-form{
@@ -66,7 +66,7 @@ h1{
     font-size: 16px;
     display: inline-block;
     height: 40px;
-    color: #666666;
+    color: #009999;
      border-radius: 20px;
 }
 .input-box select{
