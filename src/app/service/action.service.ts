@@ -3,9 +3,11 @@ import {HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Action} from './../model/action.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ActionService {
-  public API: string ='http://192.168.52.11:8080';
+  public API: string ='http://192.168.43.9:8080';
 
    //public API: string ='http://localhost:3000/action';
 

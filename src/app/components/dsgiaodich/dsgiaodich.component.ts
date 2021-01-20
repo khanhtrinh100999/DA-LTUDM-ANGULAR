@@ -35,9 +35,9 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
        this.subscription.unsubscribe();
      }
     }
-    onDeleteAction(id:number){
-      this.subscription=this.actionService.deleteAction(id).subscribe(data => {
-         this.updateDataAfterDelete(id);
+    onDeleteAction(id_detail:number){
+      this.subscription=this.actionService.deleteAction(id_detail).subscribe(data => {
+         this.updateDataAfterDelete(id_detail);
          //console.log(data);
        });
    

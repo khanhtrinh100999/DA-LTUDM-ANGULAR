@@ -73,8 +73,8 @@
 					<td>{{item. fee|currency:'USD':true}}</td>
 					<td>{{item. status}}</td> -->
 					<td>
-						<button type="button" class="btn-success"  [routerLink]="['/',item.id]">Chỉnh Sửa </button>
-						<button type="button" class="btn-danger" (click)="onDeleteAction(item.id)" >Xóa</button>
+						<button type="button" class="btn-success"  [routerLink]="['/',item.id_detail]">Chỉnh Sửa </button>
+						<button type="button" class="btn-danger" (click)="onDeleteAction(item.id_detail)" >Xóa</button>
 					</td>
 				</tr>
 				
