@@ -60,6 +60,9 @@ export class DangnhapComponent implements OnInit {
         if(code === 200){
           alert("dang nhap thanh cong")
           this.authenticationService.registerSuccessfulLogin(this.loginForm.value.username)
+          this.authenticationService.username=this.loginForm.value.username;
+          this.authenticationService.password=this.loginForm.value.password;
+
           this.router.navigate(['dsgiaodich'])
         }
         else{

@@ -5,6 +5,9 @@ import {Action} from './../../model/action.model';
 import  {Subscription} from 'rxjs';
 import { ViService} from './../../service/vi.service';
 import {Vi} from './../../model/vi.model';
+import {DataService} from './../../data.service'
+import {User} from './../../data.service'
+import { AuthenticationService } from 'src/app/auth.service';
 @Component({
   selector: 'app-dsgiaodich',
   templateUrl: './dsgiaodich.component.html',
@@ -14,10 +17,13 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
  public  action:any;
  public subscription!: Subscription;
  public  vi1:any;
+ public username!:any;
 
   constructor(
     private router:Router,
     private actionService:ActionService,
+    private userSevice:DataService,
+    private authenticationService:AuthenticationService
     
   ) { }
  vi(){
@@ -31,7 +37,8 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
   }
   
   displaylist(){
-      this.actionService.getAllActions("khanhya")//thay=user
+      this.username= this.authenticationService.getLoggedInUserName();
+      this.actionService.getAllActions(this.username)//thay=user
        .subscribe((data: Array<Action> ) => this. action= data)
     //console.log(data)
   
@@ -44,18 +51,18 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
        this.subscription.unsubscribe();
      }
     }
-    onDeleteAction(id:number){
-      this.subscription=this.actionService.deleteAction(id).subscribe(data => {
-         this.updateDataAfterDelete(id);
+    onDeleteAction(id_detail:number){
+      this.subscription=this.actionService.deleteAction(id_detail).subscribe(data => {
+         this.updateDataAfterDelete(id_detail);
          //console.log(data);
        });
    
    
     }
     
-      updateDataAfterDelete(id:number){
+      updateDataAfterDelete(id_detail:number){
         for(var i=0;i<this.action.length;i++){
-          if (this.action[i].id==id){
+          if (this.action[i].id_detail==id_detail){
             this.action.splice(i,1);
            break;
           }

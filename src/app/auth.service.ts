@@ -18,7 +18,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthenticationService {
   //  BASE_PATH = "  http://localhost:3000/auth"
-  BASE_PATH = "http://192.168.43.9:8080"
+  BASE_PATH = "http://192.168.48.124:8080"
  //BASE_PATH = "  http://localhost:3000/auth"
   USER_NAME_SESSION = 'username_session'
   public username!: String;

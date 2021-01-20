@@ -34,7 +34,8 @@ export class KhaibaosoduComponent implements OnInit,OnDestroy {
     }
   }
     onAddVi(){
-      this.vi.username='khanhya';//thay bằng tên user sau đăng nhập
+      this.vi.id=3
+      this.vi.username='hao';//thay bằng tên user sau đăng nhập
       this.subscription=this.viService.addVi(this.vi ).subscribe(data =>{
   
         this.router.navigate(['dsgiaodich']);

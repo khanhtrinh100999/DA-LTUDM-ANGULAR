@@ -9,7 +9,7 @@ import {Vi} from './../model/vi.model';
 })
 export class ViService {
  // public API: string ='http://localhost:3000/action';
- public API:string='http://localhost:8080/wallet'
+ public API:string='http://192.168.48.124:8080/wallet'
 
 
   constructor(public http:HttpClient) {

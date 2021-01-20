@@ -27,16 +27,17 @@ export class ViComponent implements OnInit,OnDestroy {
 
   }
   displayvi(){
-    this.updateVi;
+     
     this.subscriptionParams=this.activatedRouteService.params.subscribe((data:Params )=> {
       let username=data['username'];
+      //this.updateVi();
       this.subscription=this.viService.getVi(username).subscribe((vi1:any)=>{
        this.vi1=vi1;
       
       });
+    
+    
     });
-
-
   }
   updateVi(status_detail:string){
       for(var i=0;i<this.action.length;i++){

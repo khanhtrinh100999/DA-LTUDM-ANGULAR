@@ -19,7 +19,8 @@ ${window.btoa(this.authenticationService.username + ":" +
             this.authenticationService.password)}`
         })
       });
-      return next.handle(authReq);
+       //return next.handle(authReq);
+     return next.handle(req);
     } else {
       return next.handle(req);
     }

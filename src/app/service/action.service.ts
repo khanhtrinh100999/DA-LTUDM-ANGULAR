@@ -3,16 +3,18 @@ import {HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Action} from './../model/action.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ActionService {
   //public API: string ='http://192.168.52.11:8080';
 
-   public API: string ='http://192.168.43.9:8080';
+   public API: string ='http://192.168.48.124:8080';
 
 
   constructor(public http:HttpClient) { }
-  getAllActions(user:any):Observable<Array<Action>> {
-    return this.http.get<Array<Action>>(this.API+'/detail/all/'+user);
+  getAllActions(username:any):Observable<Array<Action>> {
+    return this.http.get<Array<Action>>(this.API+'/detail/all/'+username);
     }
     addAction(action:any){
       return this.http.post(this.API+'/detail/add',action);
