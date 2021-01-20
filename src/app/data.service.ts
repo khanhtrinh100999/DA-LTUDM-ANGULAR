@@ -26,8 +26,10 @@ export interface User {
  })
 export class DataService {
 
- BASE_PATH="http://192.168.43.54:8080";
+ BASE_PATH="http://192.168.64.204:8080";
 // rootURL="http://207.148.70.40:8080";
+//BASE_PATH="http://localhost:3000/data"
+
 constructor(private http: HttpClient) { }
 getUserList():Observable<Array<User>> {
  return this.http.get<Array<User>>(this.BASE_PATH+"/user/all");
@@ -37,4 +39,13 @@ getUser(username: string):Observable<User> {
  return this.http.get<User>(this.BASE_PATH+"/user/get/"+username);
 
 }
+// constructor(private http: HttpClient) { }
+//  getUserList():Observable<Array<User>> {
+//   return this.http.get<Array<User>>(this.BASE_PATH);
+ 
+//  }
+//  getUser(username: string):Observable<User> {
+//       return this.http.get<User>(this.BASE_PATH);
+    
+//      }
 } 

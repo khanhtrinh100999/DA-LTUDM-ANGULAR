@@ -31,7 +31,7 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 //import {AuthenticationService } from "./../auth.service";
 import { AuthenticationService} from './../../auth.service';
-
+import {ActionService} from './../../service/action.service'
 @Component({
   selector: 'app-dangnhap',
   templateUrl: './dangnhap.component.html',

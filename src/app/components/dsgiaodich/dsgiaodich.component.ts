@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ActionService} from './../../service/action.service';
 import {Action} from './../../model/action.model';
 import  {Subscription} from 'rxjs';
+import { ViService} from './../../service/vi.service';
+import {Vi} from './../../model/vi.model';
 @Component({
   selector: 'app-dsgiaodich',
   templateUrl: './dsgiaodich.component.html',
@@ -11,6 +13,7 @@ import  {Subscription} from 'rxjs';
 export class DsgiaodichComponent implements OnInit,OnDestroy {
  public  action:any;
  public subscription!: Subscription;
+ public  vi1:any;
 
   constructor(
     private router:Router,
@@ -23,13 +26,19 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
   ngOnInit()
    {
     this.displaylist();
-  }
-  displaylist(){
-   this.actionService.getAllActions('khanhya')//thay=user
-    .subscribe((data: Array<Action> ) => this. action= data)
-    //console.log(data)
+   
 
   }
+  
+  displaylist(){
+      this.actionService.getAllActions("khanhya")//thay=user
+       .subscribe((data: Array<Action> ) => this. action= data)
+    //console.log(data)
+  
+    }
+    
+
+
   ngOnDestroy(){
     if (this.subscription){
        this.subscription.unsubscribe();

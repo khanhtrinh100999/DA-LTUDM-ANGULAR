@@ -19,11 +19,11 @@
                     <h1 style="text-align: center ;" class="a">Kích Hoạt Ví</h1>
                      <div class="form-group" style="text-align: center;">
                        <label for="" >Khai báo số dư</label>
-                     <input type="text" class="form-control">
+                     <input type="text" class="form-control" [(ngModel)]="vi.money" [ngModelOptions]="{standalone:true}" >
                     </div>
                     
                     <div class="btn-box" style="text-align: center; " >
-                        <button type="submit" (click)="dsgiaodich()" >
+                        <button type="submit" (click)="onAddVi()" >
                             Kích Hoạt
                         </button>
                        
