@@ -23,8 +23,8 @@ export class ThongtingiaodichComponent implements OnInit,OnDestroy {
   }
   loadData(){
     this.subscriptionParams=this.activatedRouteService.params.subscribe((data:Params )=> {
-      let id=data['id'];
-      this.subscription=this.actionService.getAction(id).subscribe((action:any)=>{
+      let id_detail=data['id_detail'];
+      this.subscription=this.actionService. getAction(id_detail).subscribe((action:any)=>{
        this.action=action;
       
       });

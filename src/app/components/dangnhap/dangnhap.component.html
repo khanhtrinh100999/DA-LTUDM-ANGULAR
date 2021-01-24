@@ -69,13 +69,19 @@
             </div>
         </header>
         <main>
+            <table>
+                <tr>
+                    <td ><img class="b" src="https://luanvanviet.com/wp-content/uploads/2019/09/hinh-anh-quan-tri-ban-hang-5.jpg"></td>
+               
+            
+            <td>
             <div class="container">
             <div class="login-form">
                 <form [formGroup]="loginForm" method="post" (ngSubmit)=dangnhap()>
                     <h1 style="text-align: center ;" class="a">Đăng nhập </h1>
                     <div class="input-box">
                         <i ></i>
-                        <input formControlName = "username" type="text" placeholder="Nhập username">
+                        <input formControlName = "username" type="text" placeholder="Nhập tên đăng nhập">
                     </div>
                     <div class="input-box">
                         <i ></i>
@@ -94,6 +100,9 @@
                 </form>
             </div>
             </div>
+            </td>
+            </tr>
+            </table>
         </main>
         <footer>
             <div class="container">

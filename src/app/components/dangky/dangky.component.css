@@ -28,7 +28,10 @@ header{
 main{
     background-color: #dddddd;
     min-height: 300px;
-    padding: 7.5px 15px;
+    padding: 0px 0px ;
+   
+    
+
 }
 footer{
     background-color: #cccccc;
@@ -42,13 +45,15 @@ h1{
 }
 
 .register-form{
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    background-color: #ffffff;
-    padding: 15px;
-    border: 2px dotted hsl(203, 21%, 24%);
-    border-radius: 20px;
+    width: 330%;
+    max-width: 1500px; 
+    /* max-width: 100%; */
+     margin: 1px auto; 
+    height: 500px;
+    background-color: #54c7bf; 
+    padding : 15px;
+    /* border: 2px dotted hsl(203, 21%, 24%);
+    border-radius: 20px; */
 
 }
 
@@ -123,7 +128,21 @@ h1{
     height: 108px;
     padding-top: 40px;
     color: #3d2d2d;
-    background-color: #e7e5e4;
+    /* background-color: #e7e5e4; */
     letter-spacing: .15em;
     
   }
+  .b{
+    width: 100%;
+    max-width: 1000px; 
+    /* max-width: 100%; */
+     margin: 1px auto; 
+    height: 500px;
+    /* background-color: #ffffff; */
+    padding: 0px;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+
+ }

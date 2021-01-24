@@ -29,6 +29,7 @@ export class ViService {
     return this.http.get(this.API+'/'+username);
              
                  }
+   
     
                     
 }

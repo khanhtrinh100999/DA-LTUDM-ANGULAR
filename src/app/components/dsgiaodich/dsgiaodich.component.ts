@@ -70,7 +70,9 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
      
      
       } 
-   
+  Thongke(){
+    this.router.navigate(['thongke']);
+  } 
   Themgiaodich(){
     this.router.navigate(['themgiaodich']);
   }

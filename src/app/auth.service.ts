@@ -34,7 +34,7 @@ export class AuthenticationService {
     var params = new HttpParams()
       .set('username', username)
       .set('password', password);
-  //   return this.http.post<Response>(this.BASE_PATH + "/account/login", params, {
+ 
        return this.http.post<Response>(this.BASE_PATH + "/account/login", {username: username, password:password},
       {observe: 'response'
      })}

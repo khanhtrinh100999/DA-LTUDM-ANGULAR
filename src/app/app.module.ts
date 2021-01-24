@@ -95,6 +95,7 @@ import {RouterModule,Routes} from '@angular/router';
 import {HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './http-interceptor.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ThongkeComponent } from './components/thongke/thongke.component';
 const appRoutes:Routes=[
   {
     path:'', component:DangnhapComponent
@@ -120,7 +121,7 @@ const appRoutes:Routes=[
     path:'vi', component:ViComponent
     },
   {
-    path:'thoat',component:  AppComponent,
+    path:'thongke',component:  ThongkeComponent,
   }
   ]
 
@@ -134,6 +135,7 @@ const appRoutes:Routes=[
     ViComponent,
     ThemgiaodichComponent,
     ThongtingiaodichComponent,
+    ThongkeComponent,
     //ComponentToViewComponent
   ],
   imports: [
