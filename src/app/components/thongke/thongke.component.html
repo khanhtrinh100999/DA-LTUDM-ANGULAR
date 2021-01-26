@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Thống Kê</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="thongke.component.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <header>
-            <div class="container">
-               
-            </div>
-        </header>
-        <main>
-            <table>
-                <tr>
-                    <td ><img class="c" src="https://luanvanviet.com/wp-content/uploads/2019/09/hinh-anh-quan-tri-ban-hang-5.jpg"></td>
-               
-            <td>
-           
-            <div class="container">
-            <div class="b">
-                <form action="" method="post">
-                    <h1 style="text-align: center ;" class="a">Thống Kê</h1>
-                     <div class="form-group" style="text-align: center;">
+
+<head>
+    <title>Thống Kê</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="thongke.component.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+        </div>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <td><img class="c"
+                        src="https://luanvanviet.com/wp-content/uploads/2019/09/hinh-anh-quan-tri-ban-hang-5.jpg"></td>
+
+                <td>
+
+                    <div class="container">
+                        <div class="b">
+                            <form action="" method="post">
+                                <h1 style="text-align: center ;" class="a">Thống Kê</h1>
+                                <!-- <div class="form-group" style="text-align: center;">
                        <label for="" >Số tiền đã chi</label>
                      <input type="text" class="form-control" [(ngModel)]="vi.chi" [ngModelOptions]="{standalone:true}">
                     </div>
                     <div class="form-group" style="text-align: center;">
                         <label for="" >Số tiền thu</label>
                       <input type="text" class="form-control"[(ngModel)]="vi.thu" [ngModelOptions]="{standalone:true}">
-                     </div>
-                     
-                    
-                    <div class="btn-box" style="text-align: center; " >
-                      
-                       
-                        <button type="submit" (click)="thoat()">
-                            Thoát
-                        </button>
+                     </div> -->
+                                <div class="form-group" style="text-align: center;">
+                                    <label for="">Thu</label>
+
+                                    <input *ngFor="let item of action" type="text" class="form-control"
+                                        [(ngModel)]="item.thu" style="text-align: center;"
+                                        [ngModelOptions]="{standalone:true}">
+                                </div>
+                                <div class="form-group" style="text-align: center;">
+                                    <label for="">Chi</label>
+                                    <input *ngFor="let item of action" type="text" class="form-control"
+                                        [(ngModel)]="item.chi" style="text-align: center;"
+                                        [ngModelOptions]="{standalone:true}">
+                                </div>
+
+
+                                <div class="btn-box" style="text-align: center; ">
+
+
+                                    <button type="submit" (click)="thoat()">
+                                        Thoát
+                                    </button>
+                                </div>
+
+
+                            </form>
+                        </div>
                     </div>
-                    
-                    
-                </form>
-            </div>
-            </div>
-            </td>
+                </td>
             </tr>
-            </table>
-            
-        </main>
-        <footer>
-            <div class="container">
-          
-            </div>
-        </footer>
-    </body>
+        </table>
+
+    </main>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
+</body>
+
 </html>
-
-
-
-

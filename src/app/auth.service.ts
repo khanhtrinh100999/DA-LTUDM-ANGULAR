@@ -43,11 +43,18 @@ export class AuthenticationService {
   //     {observe: 'response'
   //    });
   // }
-  dangky(username: String, password: String, fullname: String, gmail: String) {
+  dangky(username: string, password: string, fullname: string, gmail: string) {
+    console.log(username)
+    console.log(password)
+    var params = new HttpParams()
+      .set('username', username)
+      .set('password', password);
+ 
     return this.http.post<Response>(this.BASE_PATH + "/account/register", { 
       fullname: fullname, gmail:gmail, password: password,username: username },
       { observe: 'response' });
   }
+
   // dangky(username: String, password: String, fullname: String, gmail: String) {
   //   return this.http.post<Response>(this.BASE_PATH ,
   //     { observe: 'response' });

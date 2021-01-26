@@ -42,11 +42,11 @@ export class KhaibaosoduComponent implements OnInit, OnDestroy {
   onAddVi() {
     //this.vi.id=3
     //this.vi.username = 'a';//thay bằng tên user sau đăng nhập
-    this.username= this.authenticationService.getLoggedInUserName();
-    this.thu=0;
-    this.chi=0;
+    this.vi.username= this.authenticationService.getLoggedInUserName();
+    console.log(this.vi.username);
     this.subscription = this.viService.addVi(this.vi).subscribe(data => {
-
+      this.thu=0;
+      this.chi=0;
       this.router.navigate(['']);
     });
 

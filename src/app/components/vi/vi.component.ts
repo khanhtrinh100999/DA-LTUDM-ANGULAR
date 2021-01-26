@@ -27,8 +27,8 @@ export class ViComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.vi= new Vi();
-    this.loadData();
-    //this.displaylist();
+    //this.loadData();
+    this.displaylist();
   }
   loadData(){
     this.subscriptionParams=this.activatedRouteService.params.subscribe((data:Params )=> {
@@ -41,13 +41,18 @@ export class ViComponent implements OnInit, OnDestroy {
     });
 
   }
-  // displaylist(){
-  //   this.username= this.authenticationService.getLoggedInUserName();
-  //   this.viService.getVi(this.vi.username).subscribe((vi:any)=>{
-  //          this.vi=vi;
 
-  //          });
-  // }
+
+  displaylist(){
+    this.username= this.authenticationService.getLoggedInUserName();
+    this.viService.getVi(this.username).subscribe((data : Array<Vi> )=>
+           this. action =data 
+           // console.log(this.action.chi);}
+           
+
+           );
+  }
+
   // displaylist() {
   //   this.username = this.authenticationService.getLoggedInUserName();
   //   console.log(this.username);
@@ -57,15 +62,13 @@ export class ViComponent implements OnInit, OnDestroy {
 
   // }
   onEditVi() {
-
+    
+    this.vi.username = this.authenticationService.getLoggedInUserName();
     this.subscription = this.viService.updateVi(this.vi).subscribe(data => {
       this.router.navigate(['dsgiaodich']);
-
     });
 
   }
-
-
 
   dsgiaodich() {
     this.router.navigate(['dsgiaodich'])

@@ -111,6 +111,9 @@ const appRoutes: Routes = [
     path: 'vi', component: ViComponent
   },
   {
+    path: 'thongke', component: ThongkeComponent,
+  },
+  {
     path: 'dangky', component: DangkyComponent
   },
 
@@ -129,9 +132,9 @@ const appRoutes: Routes = [
     path: ':id_detail', component: ThongtingiaodichComponent
   },
 
-  {
-    path: 'thongke', component: ThongkeComponent,
-  }
+  // {
+  //   path: 'thongke', component: ThongkeComponent,
+  // }
 ]
 
 @NgModule({
