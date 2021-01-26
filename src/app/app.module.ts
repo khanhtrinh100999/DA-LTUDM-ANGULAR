@@ -31,9 +31,9 @@
 
 //   {
 //     path:'dsgiaodich', component: DsgiaodichComponent,
-  
+
 //   },
-    
+
 //       {
 //         path:'themgiaodich', component: ThemgiaodichComponent
 //         },
@@ -42,14 +42,14 @@
 //           {
 //             path:'vi', component:ViComponent
 //             },
-          
-        
 
 
 
-          
-        
-  
+
+
+
+
+
 //   ]
 // @NgModule({
 //   declarations: [
@@ -90,40 +90,49 @@ import { ThongtingiaodichComponent } from './components/thongtingiaodich/thongti
 import { ViComponent } from './components/vi/vi.component';
 //import { ComponentToViewComponent } from './Components/component-to-view/component-to-view.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import {RouterModule,Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 //import {DataService} from './data.service'
-import {HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './http-interceptor.service';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ThongkeComponent } from './components/thongke/thongke.component';
-const appRoutes:Routes=[
+const appRoutes: Routes = [
   {
-    path:'', component:DangnhapComponent
+    path: '', component: DangnhapComponent
+  },
+  // {
+  //   path:'vi', component:ViComponent
+  //   },
+  
+  {
+    path: 'dsgiaodich', component: DsgiaodichComponent
   },
   {
-    path:'dangky', component: DangkyComponent
+    path: 'vi', component: ViComponent
   },
   {
-    path:'dsgiaodich', component: DsgiaodichComponent
-  },
-  {
-    path:'sodu', component: KhaibaosoduComponent 
+    path: 'dangky', component: DangkyComponent
   },
 
   {
-    path:'themgiaodich', component: ThemgiaodichComponent
-    },
+    path: 'sodu', component: KhaibaosoduComponent
+  },
 
   {
-    path:'thongtingiaodich', component: ThongtingiaodichComponent
-    },
-    {
-    path:'vi', component:ViComponent
-    },
+    path: 'themgiaodich', component: ThemgiaodichComponent
+  },
+
+  // {
+  //   path:'thongtingiaodich', component: ThongtingiaodichComponent
+  //   },
   {
-    path:'thongke',component:  ThongkeComponent,
+    path: ':id_detail', component: ThongtingiaodichComponent
+  },
+
+  {
+    path: 'thongke', component: ThongkeComponent,
   }
-  ]
+]
 
 @NgModule({
   declarations: [

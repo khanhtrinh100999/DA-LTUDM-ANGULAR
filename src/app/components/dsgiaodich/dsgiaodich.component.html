@@ -17,19 +17,19 @@
     
 	<div class="container-fluid">
 		
-		<ul class="nav navbar-nav" style="color: white" >
+		<ul class="navbar-nav" style="color: white" >
 			<li class="active" style="color: white" >
-				<a style="color:  black" (click)="vi()" >KIỂM TRA VÍ</a>
+				<a style="color:  black" (click)="vi1()" >KIỂM TRA VÍ</a>
 
 			</li>
-			<li >
+			<li class="active2" >
 				<a style="color: black" (click)="Themgiaodich()"> THÊM GIAO DỊCH</a>
 			</li>
-			<li >
+			<li class="active3">
 				<a style="color: black" (click)="Thongke()"> THỐNG KÊ</a>
 			</li>
-			<li >
-				<a  href="#" style="color:  black">ĐĂNG XUẤT</a>
+			<li class="active4">
+				<a (click)="thoat()" style="color:  black">ĐĂNG XUẤT</a>
 			</li>
 			
 		</ul>
@@ -58,6 +58,7 @@
 		<table class="table table-hover">
 			<thead >
 				<tr >
+					<th style="text-align: center;">Tên</th>
 					<th style="text-align: center;">Tên Giao Dịch</th>
 					<th style="text-align: center;">Ngày Giao Dịch</th>
 					<th style="text-align: center;">Số Tiền Giao Dịch</th>
@@ -67,6 +68,7 @@
 			</thead>
 			<tbody>
 				<tr *ngFor="let item of action"  >
+					<td>{{item.username}}</td>
 					<td>{{item.name_detail}}</td>
 					<td>{{item.date_detail}}</td>
 					<td>{{item.money_detail|currency:'USD':true}}</td>

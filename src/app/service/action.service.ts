@@ -9,7 +9,7 @@ import {Action} from './../model/action.model';
 export class ActionService {
   //public API: string ='http://192.168.52.11:8080';
 
-   public API: string ='http://192.168.48.124:8080';
+   public API: string ='http://192.168.43.54:8080';
 
 
   constructor(public http:HttpClient) { }
@@ -20,13 +20,13 @@ export class ActionService {
       return this.http.post(this.API+'/detail/add',action);
      
       }   
-  getAction(id:number){
-     return this.http.get(this.API+'/'+id);
+  getAction(id_detail:number){
+     return this.http.get(this.API+'/detail/get/'+id_detail);
   
       }
     updateAction(action:any){
         
-      return this.http.put(this.API+'/'+action.id,action);
+      return this.http.put(this.API+'/detail/put/'+action.id_detail,action);
 
     
       }  

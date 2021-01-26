@@ -26,7 +26,7 @@ export interface User {
  })
 export class DataService {
 
- BASE_PATH="http://192.168.48.124:8080";
+ BASE_PATH="http://192.168.43.54:8080";
 // rootURL="http://207.148.70.40:8080";
 //BASE_PATH="http://localhost:3000/data"
 

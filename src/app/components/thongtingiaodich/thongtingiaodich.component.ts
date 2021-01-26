@@ -13,7 +13,7 @@ export class ThongtingiaodichComponent implements OnInit,OnDestroy {
   public subscription! :Subscription;
   public subscriptionParams! :Subscription;
   public action!:Action;
-  constructor(private routerService:Router,
+  constructor(private router:Router,
     public actionService :ActionService,
     public activatedRouteService :ActivatedRoute) { }
 
@@ -32,10 +32,13 @@ export class ThongtingiaodichComponent implements OnInit,OnDestroy {
 
   }
   onEditAction(){
-    this.subscription =this.actionService.updateAction(this.action).subscribe(data =>{
-     this.routerService.navigateByUrl('dsgiaodich');
     
-    });
+    this.subscription =this.actionService.updateAction(this.action).subscribe(data =>{
+     //this.router.na('dsgiaodich');
+     this.router.navigate(['dsgiaodich'])
+    
+   // this.routerService.navigateByUrl('dsgiaodich')
+   });
 
   }
   ngOnDestroy(){
@@ -51,7 +54,7 @@ export class ThongtingiaodichComponent implements OnInit,OnDestroy {
   
   
     dsgiaodich(){
-      this.routerService.navigateByUrl('dsgiaodich');
+      this.router.navigate(['dsgiaodich']);
     }
   
  

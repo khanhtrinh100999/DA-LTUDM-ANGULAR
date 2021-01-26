@@ -25,9 +25,9 @@ export class ThemgiaodichComponent implements OnInit,OnDestroy {
     this.action =new Action();
   }
   onAddAction(){
-    //this.action.username='khanhya';//thay bằng tên user sau đăng nhập
-    this.username= this.authenticationService.getLoggedInUserName();
-    this.subscription=this.actionService.addAction(this.action ).subscribe(data =>{
+    //this.action.username="khanhya";//thay bằng tên user sau đăng nhập
+    this.action.username= this.authenticationService.getLoggedInUserName();
+    this.subscription=this.actionService.addAction(this.action).subscribe(data =>{
 
       this.router.navigate(['dsgiaodich']);
     });

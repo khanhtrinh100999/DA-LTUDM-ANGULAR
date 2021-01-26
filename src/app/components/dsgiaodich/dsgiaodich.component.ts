@@ -1,12 +1,22 @@
+// import { Component, OnInit ,OnDestroy} from '@angular/core';
+// import {  ActivatedRoute, Router } from '@angular/router';
+// import { ActionService} from './../../service/action.service';
+// import {Action} from './../../model/action.model';
+// import  {Subscription} from 'rxjs';
+// import { ViService} from './../../service/vi.service';
+// import {Vi} from './../../model/vi.model';
+// import {DataService} from './../../data.service'
+// //import {User} from './../../data.service'
+// import { AuthenticationService } from 'src/app/auth.service';
 import { Component, OnInit ,OnDestroy} from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ActionService} from './../../service/action.service';
 import {Action} from './../../model/action.model';
 import  {Subscription} from 'rxjs';
 import { ViService} from './../../service/vi.service';
 import {Vi} from './../../model/vi.model';
-import {DataService} from './../../data.service'
-import {User} from './../../data.service'
+//import {DataService} from './../../data.service'
+//import {User} from './../../data.service'
 import { AuthenticationService } from 'src/app/auth.service';
 @Component({
   selector: 'app-dsgiaodich',
@@ -16,21 +26,31 @@ import { AuthenticationService } from 'src/app/auth.service';
 export class DsgiaodichComponent implements OnInit,OnDestroy {
  public  action:any;
  public subscription!: Subscription;
- public  vi1:any;
+ public  vi:any;
  public username!:any;
+ public password:any;
+ public date_detail:any;
 
   constructor(
     private router:Router,
     private actionService:ActionService,
-    private userSevice:DataService,
-    private authenticationService:AuthenticationService
+    //private userSevice:DataService,
+    private authenticationService:AuthenticationService,
+   // private activatedRoute:ActivatedRoute,
+   // private viService:ViService
     
   ) { }
- vi(){
+ vi1(){
    this.router.navigate(['vi'])
  }
   ngOnInit()
    {
+    // this.activatedRoute.queryParams.subscribe(data => {
+    //   console.log(data);
+    //   let date_detail=data['date_detail'];
+    //   this.action=this.actionService.getAllActions(date_detail);
+
+    // });
     this.displaylist();
    
 
@@ -70,6 +90,12 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
      
      
       } 
+      thoat(){
+        
+        this.username=this.authenticationService.logout();
+        this.password=this.authenticationService.logout();
+        this.router.navigate([''])
+      }
   Thongke(){
     this.router.navigate(['thongke']);
   } 
@@ -80,6 +106,9 @@ export class DsgiaodichComponent implements OnInit,OnDestroy {
     //this.router.navigate(['edit'])
  // }
   
- 
+//  onSearch(){
+//    this.router.navigate(['/dsgiaodich'],{queryParams:{date_detail:this.date_detail? this.date_detail:''}});
+   
+//   }
 }
 
