@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kiểm Tra Ví</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="vi.component.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+               
+            </div>
+        </header>
+        <main>
+            <table>
+                <tr>
+                    <td ><img class="c" src="https://luanvanviet.com/wp-content/uploads/2019/09/hinh-anh-quan-tri-ban-hang-5.jpg"></td>
+               
+            <td>
+           
+            <div class="container">
+            <div class="b">
+                <form action="" method="post">
+                    <h1 style="text-align: center ;" class="a">Kiểm Tra Ví</h1>
+                     <div class="form-group" style="text-align: center;">
+                       <label for="" >Số Dư Khả Dụng</label>
+                     <input type="text" class="form-control"[(ngModel)]="vi.money" [ngModelOptions]="{standalone:true}">
+                    </div>
+                    <div class="form-group" style="text-align: center;">
+                        <label for="" >Thu</label>
+                      <input type="text" class="form-control"[(ngModel)]="vi.thu" [ngModelOptions]="{standalone:true}">
+                     </div>
+                     <div class="form-group" style="text-align: center;">
+                        <label for="" >Chi</label>
+                      <input type="text" class="form-control"[(ngModel)]="vi.chi" [ngModelOptions]="{standalone:true}">
+                     </div>
+                    
+                    <div class="btn-box" style="text-align: center; " >
+                        <button type="submit" (click)="onEditVi()" >
+                            Lưu
+                        </button>
+                       
+                        <button type="submit"  (click)="dsgiaodich()" >
+                            Thoát
+                        </button>
+                    </div>
+                    
+                    
+                </form>
+            </div>
+            </div>
+            </td>
+            </tr>
+            </table>
+            
+        </main>
+        <footer>
+            <div class="container">
+          
+            </div>
+        </footer>
+    </body>
+</html>
+
+
+
+

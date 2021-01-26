@@ -10,10 +10,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.col-6{
-    float: left;
-    width: 50%;
-}
+
 .margin_b{
     margin-bottom: 7.5px;
 }
@@ -27,11 +24,8 @@ header{
 }
 main{
     background-color: #dddddd;
-    min-height: 300px;
-    padding: 0px 0px ;
-   
-    
-
+    min-height: 500px;
+    padding: 0px 0px;
 }
 footer{
     background-color: #cccccc;
@@ -44,16 +38,14 @@ h1{
     margin-bottom: 30px;
 }
 
-.register-form{
-    width: 330%;
+.edit-form{
+    width: 210%;
     max-width: 1500px; 
     /* max-width: 100%; */
      margin: 1px auto; 
     height: 500px;
     background-color: #54c7bf; 
-    padding : 15px;
-    /* border: 2px dotted hsl(203, 21%, 24%);
-    border-radius: 20px; */
+    padding : 0px 0px;
 
 }
 
@@ -132,7 +124,7 @@ h1{
     letter-spacing: .15em;
     
   }
-  .b{
+  .c{
     width: 100%;
     max-width: 1000px; 
     /* max-width: 100%; */

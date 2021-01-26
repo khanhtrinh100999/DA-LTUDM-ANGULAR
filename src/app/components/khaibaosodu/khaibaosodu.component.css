@@ -4,117 +4,64 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.container{
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.col-6{
-    float: left;
-    width: 50%;
-}
-.margin_b{
-    margin-bottom: 7.5px;
-}
-.clear{
-    clear: both;
-}
 header{
     background-color: #cccccc;
     min-height: 70px;
     padding: 15px;
+    margin-top: 120px;
+    
+    
+   
 }
 main{
     background-color: #dddddd;
     min-height: 300px;
     padding: 0px 0px ;
-   
-    
-
 }
 footer{
     background-color: #cccccc;
     min-height: 70px;
     padding: 15px;
 }
-h1{
-    color: #009999;
-    font-size: 20px;
-    margin-bottom: 30px;
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
-
-.register-form{
-    width: 330%;
+.b{
+    width: 280%;
     max-width: 1500px; 
     /* max-width: 100%; */
      margin: 1px auto; 
     height: 500px;
     background-color: #54c7bf; 
     padding : 15px;
-    /* border: 2px dotted hsl(203, 21%, 24%);
-    border-radius: 20px; */
-
 }
-
+h1{
+    color: #009999;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
 .input-box{
     margin-bottom: 10px;
-     border-radius: 20px;
+
 }
-.input-box input[type='text'],
-.input-box input[type='password'],
-.input-box input[type='date']{
+.form-group input{
     padding: 7.5px 15px;
     width: 100%;
     border: 1px solid #93c8e0;
     outline: none;
-    font-size: 16px;
-    display: inline-block;
-    height: 40px;
-    color: #666666;
-     border-radius: 20px;
-}
-.input-box select{
-    padding: 7.5px 15px;
-    width: 100%;
-    border: 1px solid #cccccc;
-    outline: none;
-    font-size: 16px;
-    display: inline-block;
-    height: 40px;
-    color: #666666;
-     border-radius: 20px;
-}
-.input-box option{
-    font-size: 16px;
-     border-radius: 20px;
-}
-.input-box input[type='checkbox']{
-    height: 1.5em;
-    width: 1.5em;
-    vertical-align: middle;
-    line-height: 2em;
-     border-radius: 20px;
-}
-.input-box textarea{
-    padding: 7.5px 15px;
-    width: 100%;
-    border: 1px solid #cccccc;
-    outline: none;
-    font-size: 16px;
-    min-height: 120px;
-    color: #666666;
-     border-radius: 20px;
+    border-radius: 20px;
 }
 .btn-box{
     text-align: right;
     margin-top: 30px;
-    
-    
 }
 .btn-box button{
     padding: 7.5px 15px;
-    border-radius: 20px;
+    border-radius: 15px;
     background-color: #009999;
     color: #ffffff;
     border: none;
@@ -130,9 +77,9 @@ h1{
     color: #3d2d2d;
     /* background-color: #e7e5e4; */
     letter-spacing: .15em;
-    
+   
   }
-  .b{
+  .c{
     width: 100%;
     max-width: 1000px; 
     /* max-width: 100%; */
@@ -146,3 +93,4 @@ h1{
     margin-left:0px;
 
  }
+ 
