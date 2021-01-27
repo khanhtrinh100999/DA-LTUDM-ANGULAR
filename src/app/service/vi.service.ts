@@ -26,10 +26,10 @@ export class ViService {
 
   }
 
-  // getVi(username: any) {
-  //   return this.http.get(this.AP + '/get/' + username);
+  getVi1(username: any) {
+    return this.http.get(this.AP + '/wallet/get/' + username);
 
-  // }
+  }
 
 
 

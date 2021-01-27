@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Thống Kê</title>
+    <title>Kiểm Tra Ví</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="thongke.component.css" rel="stylesheet" type="text/css" />
@@ -25,34 +25,25 @@
                     <div class="container">
                         <div class="b">
                             <form action="" method="post">
-                                <h1 style="text-align: center ;" class="a">Thống Kê</h1>
-                                <!-- <div class="form-group" style="text-align: center;">
-                       <label for="" >Số tiền đã chi</label>
-                     <input type="text" class="form-control" [(ngModel)]="vi.chi" [ngModelOptions]="{standalone:true}">
-                    </div>
-                    <div class="form-group" style="text-align: center;">
-                        <label for="" >Số tiền thu</label>
-                      <input type="text" class="form-control"[(ngModel)]="vi.thu" [ngModelOptions]="{standalone:true}">
-                     </div> -->
+                                <h1 style="text-align: center ;" class="a">KIEM TRA VI</h1>
+
+
                                 <div class="form-group" style="text-align: center;">
                                     <label for="">Thu</label>
-
-                                    <input *ngFor="let item of action" type="text" class="form-control"
-                                        [(ngModel)]="item.thu" style="text-align: center;"
-                                        [ngModelOptions]="{standalone:true}">
+                                    
+                                    <input *ngFor="let item of action" type="text" class="form-control" [(ngModel)]="item.thu"
+                                    style="text-align: center;" [ngModelOptions]="{standalone:true}"> 
                                 </div>
                                 <div class="form-group" style="text-align: center;">
                                     <label for="">Chi</label>
-                                    <input *ngFor="let item of action" type="text" class="form-control"
-                                        [(ngModel)]="item.chi" style="text-align: center;"
-                                        [ngModelOptions]="{standalone:true}">
-                                </div>
-
+                                    <input *ngFor="let item of action" type="text" class="form-control" [(ngModel)]="item.chi"
+                                    style="text-align: center;" [ngModelOptions]="{standalone:true}">
+                                </div> 
 
                                 <div class="btn-box" style="text-align: center; ">
+                                   
 
-
-                                    <button type="submit" (click)="thoat()">
+                                    <button type="submit" (click)="dsgiaodich()">
                                         Thoát
                                     </button>
                                 </div>
@@ -61,8 +52,10 @@
                             </form>
                         </div>
                     </div>
-                </td>
-            </tr>
+            </tr>  
+            
+
+
         </table>
 
     </main>

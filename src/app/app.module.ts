@@ -96,23 +96,21 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './http-interceptor.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ThongkeComponent } from './components/thongke/thongke.component';
+
 const appRoutes: Routes = [
   {
     path: '', component: DangnhapComponent
   },
-  // {
-  //   path:'vi', component:ViComponent
-  //   },
-  
   {
-    path: 'dsgiaodich', component: DsgiaodichComponent
+    path: 'thongke', component: ThongkeComponent
   },
   {
     path: 'vi', component: ViComponent
   },
   {
-    path: 'thongke', component: ThongkeComponent,
+    path: 'dsgiaodich', component: DsgiaodichComponent
   },
+ 
   {
     path: 'dangky', component: DangkyComponent
   },
@@ -125,16 +123,12 @@ const appRoutes: Routes = [
     path: 'themgiaodich', component: ThemgiaodichComponent
   },
 
-  // {
-  //   path:'thongtingiaodich', component: ThongtingiaodichComponent
-  //   },
   {
     path: ':id_detail', component: ThongtingiaodichComponent
   },
+ 
 
-  // {
-  //   path: 'thongke', component: ThongkeComponent,
-  // }
+  
 ]
 
 @NgModule({
@@ -148,7 +142,7 @@ const appRoutes: Routes = [
     ThemgiaodichComponent,
     ThongtingiaodichComponent,
     ThongkeComponent,
-    //ComponentToViewComponent
+    
   ],
   imports: [
     BrowserModule,

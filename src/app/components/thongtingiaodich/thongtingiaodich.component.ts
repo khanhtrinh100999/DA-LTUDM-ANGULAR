@@ -36,9 +36,11 @@ export class ThongtingiaodichComponent implements OnInit, OnDestroy {
     
     this.subscription = this.actionService.updateAction(this.action).subscribe(data => {
 
-      this.router.navigate(['/dsgiaodich']);
+      
 
     });
+    this.router.navigate(['/dsgiaodich']);
+
 
   }
 

@@ -95,19 +95,12 @@ export class DsgiaodichComponent implements OnInit, OnDestroy {
     this.password = this.authenticationService.logout();
     this.router.navigate([''])
   }
-  Thongke() {
-    this.router.navigate(['thongke']);
-  }
+  
   Themgiaodich() {
     this.router.navigate(['themgiaodich']);
   }
-  //edit(){
-  //this.router.navigate(['edit'])
-  // }
-
-  //  onSearch(){
-  //    this.router.navigate(['/dsgiaodich'],{queryParams:{date_detail:this.date_detail? this.date_detail:''}});
-
-  //   }
+  thongke(){
+    this.router.navigate(['thongke'])
+  }
 }
 

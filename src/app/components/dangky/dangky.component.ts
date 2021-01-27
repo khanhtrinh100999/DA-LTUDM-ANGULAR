@@ -34,6 +34,11 @@ export class DangkyComponent implements OnInit {
 
   constructor(private router:Router,private fb:FormBuilder, private authenticationService: AuthenticationService) { }
 
+  loginForm = this.fb.group({
+    username:[''],
+    password:['']
+  });
+
   registerForm = this.fb.group({
     username :[''],
     gmail:[''],
@@ -52,6 +57,9 @@ export class DangkyComponent implements OnInit {
       var code = response.status;
       if(code == 201){
         alert("Đăng ky thành công");
+        this.authenticationService.username=this.registerForm.value.username;
+        this.authenticationService.password=this.registerForm.value.password;
+        this.authenticationService.registerSuccessfulLogin(this.registerForm.value.username)
         this.vi();
       }
       else{

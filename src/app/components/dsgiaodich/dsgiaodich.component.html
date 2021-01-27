@@ -25,10 +25,10 @@
 			<li class="active2" >
 				<a style="color: black" (click)="Themgiaodich()"> THÊM GIAO DỊCH</a>
 			</li>
-			<li class="active3">
-				<a style="color: black" (click)="Thongke()"> THỐNG KÊ</a>
+			<li class="active4" >
+				<a style="color: black" (click)="thongke()"> THỐNG KÊ</a>
 			</li>
-			<li class="active4">
+			<li class="active3">
 				<a (click)="thoat()" style="color:  black">ĐĂNG XUẤT</a>
 			</li>
 			
@@ -45,11 +45,7 @@
 	<div class="panel-heading">
 		<h2 style="color: black" class="b" >Lịch Sử Giao Dịch</h2>
 	</div>
-	<!-- <div class="form-group" >
-		<label for="" >Ngày</label>
-	  <input type="text" style="width: 300px;" class="form-control">
-	 </div>
-	 <button>Tìm Kiếm</button> -->
+	
 	 <br/>
 	 <br/>
 	 <br/>
@@ -58,7 +54,7 @@
 		<table class="table table-hover">
 			<thead >
 				<tr >
-					<th style="text-align: center;">Tên</th>
+					
 					<th style="text-align: center;">Tên Giao Dịch</th>
 					<th style="text-align: center;">Ngày Giao Dịch</th>
 					<th style="text-align: center;">Số Tiền Giao Dịch</th>
@@ -68,15 +64,12 @@
 			</thead>
 			<tbody>
 				<tr *ngFor="let item of action"  >
-					<td>{{item.username}}</td>
+					
 					<td>{{item.name_detail}}</td>
 					<td>{{item.date_detail}}</td>
-					<td>{{item.money_detail|currency:'USD':true}}</td>
+					<td>{{item.money_detail|currency:'VND':true}}</td>
 					<td>{{item.status_detail}}</td> 
-					<!-- <td>{{item. author}}</td>
-					<td>{{item. date}}</td>
-					<td>{{item. fee|currency:'USD':true}}</td>
-					<td>{{item. status}}</td> -->
+				
 					<td>
 						<button type="button" class="btn-success"  [routerLink]="['/',item.id_detail]">Chỉnh Sửa </button>
 						<button type="button" class="btn-danger" (click)="onDeleteAction(item.id_detail)" >Xóa</button>

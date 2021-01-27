@@ -12,11 +12,11 @@ import { AuthenticationService } from 'src/app/auth.service';
   styleUrls: ['./khaibaosodu.component.css']
 })
 export class KhaibaosoduComponent implements OnInit, OnDestroy {
-  public vi: any;
+  public vi!:Vi ;
   public username!: any;
   public subscription!: Subscription;
-  public thu: any;
-  public chi: any;
+  public thu!: Vi;
+  public chi!: Vi;
   constructor(public viService: ViService,
     public router: Router,
     private authenticationService: AuthenticationService
@@ -41,12 +41,14 @@ export class KhaibaosoduComponent implements OnInit, OnDestroy {
   }
   onAddVi() {
     //this.vi.id=3
-    //this.vi.username = 'a';//thay bằng tên user sau đăng nhập
+    //this.vi.username = 'hvan';//thay bằng tên user sau đăng nhập
     this.vi.username= this.authenticationService.getLoggedInUserName();
-    console.log(this.vi.username);
+    console.log("auth.user->"+ this.authenticationService.getLoggedInUserName())
+    console.log("vi.user->"+this.vi.username);
+    this.vi.thu=0;
+    this.vi.chi=0;
     this.subscription = this.viService.addVi(this.vi).subscribe(data => {
-      this.thu=0;
-      this.chi=0;
+      
       this.router.navigate(['']);
     });
 
